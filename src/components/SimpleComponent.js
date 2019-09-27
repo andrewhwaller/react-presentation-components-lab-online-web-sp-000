@@ -9,9 +9,18 @@ class SimpleComponent extends Component {
 
   render() {
     return(
-      <div>
+      <div onClick={this.handleClick()}>
         {this.state.happy}
       </div>
     )
+  }
+
+  handleClick() {
+    if (this.state === 'happy') return
+    else {
+      this.state.setState() {
+        mood: 'sad';
+      }
+    }
   }
 }
